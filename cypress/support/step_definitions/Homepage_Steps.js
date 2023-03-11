@@ -17,3 +17,7 @@ When("I type a product value pc portable msi", () => {
 When("I click on the search button", () => {
   cy.xpath("//button[normalize-space()='Rechercher']").click();
 });
+
+When("I type a specific product value {string}", (productValue) => {
+  cy.xpath("//input[@id='fi-q']").type(productValue);
+});
